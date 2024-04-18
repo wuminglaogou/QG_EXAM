@@ -1,0 +1,374 @@
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+li{
+   list-style: none;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont.woff2?t=1713150373059') format('woff2'),
+       url('iconfont.woff?t=1713150373059') format('woff'),
+       url('iconfont.ttf?t=1713150373059') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.clearfix::after{
+ content: "";
+ display: block;
+ height: 0;
+ clear: both;
+ visibility: hidden;
+}
+.QG_title{
+  width: 1000px;
+  text-align: center;
+  margin:0 auto ;
+  margin-top: 60px;
+  font-size: 48px;
+}
+.carousel{
+ width: 870px;
+ height: 450px;
+ margin:0 auto ;
+ margin-top: 20px;
+}
+/* .carousel_left{
+float: left;
+background-color: rgb(100, 100, 226);
+width: 170px;
+ height: 450px; 
+}
+.carousel_left_title{
+height:50px;
+line-height: 40px;
+border-bottom: 1px black solid;
+text-indent: 5px;
+}
+.carousel_left ul li{
+height:79px;
+line-height: 71px;
+border-bottom: 1px black solid;
+border-collapse: collapse;
+text-indent: 5px;
+}
+.carousel_left ul li:last-of-type{
+    border-bottom: none;
+} */
+/* .carousel_right{
+    float: left;
+    width: 870px;
+    height: 450px;
+    background-color: wheat;
+} */
+.carouse0{
+ perspective: 1500px;
+ 
+}
+.carousel{
+  position: relative;
+  width: 400px;
+  height: 350px;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  transform-style: preserve-3d;
+  animation:rotate 20s linear infinite;
+}
+.carouse_title{
+  margin-top: 30px;
+  text-align: center;
+}
+.carousel:hover{
+  animation-play-state: paused;
+}
+.carousel div{
+  position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+}
+.carousel div:nth-child(1)
+{
+transform: translateZ(400px);
+}
+.carousel div:nth-child(2)
+{
+transform:rotateY(60deg) translateZ(400px);
+}
+.carousel div:nth-child(3)
+{
+transform:rotateY(120deg) translateZ(400px);
+}
+.carousel div:nth-child(4)
+{
+transform:rotateY(180deg) translateZ(400px);
+}
+.carousel div:nth-child(5)
+{
+transform:rotateY(240deg) translateZ(400px);
+}
+.carousel div:nth-child(6)
+{
+transform:rotateY(300deg) translateZ(400px);
+}
+@keyframes rotate{
+  0%{
+    transform:rotateY(0)
+  }
+   100%{
+    transform:rotateY(360deg)
+  }
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+.All_meeting{
+margin: 0  auto;
+margin-top: 30px;
+width: 1000px;
+border: 1px solid black;
+margin-bottom: 150px;
+}
+.All_meeting h1{
+  text-align: center;
+  border: 1px solid black;
+border-collapse: collapse;
+} 
+.All_meeting .All_meeting_middle li{
+border: 1px solid black;
+border-collapse: collapse;
+height: 120px;
+}
+.All_meeting .All_meeting_middle li .All_meeting_img{
+  float: left;
+  width: 150px;
+  height: 100px;
+}
+.All_meeting_content{
+ float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 410px;
+  height: 100px;
+}
+.All_meeting_introduce{
+    float: left;
+    margin-left: 20px;
+    font-size: 19px;
+    word-wrap: break-word;
+    width: 230px;
+    height: 100px;
+    overflow: hidden;
+}
+.meeting_type_work,.meeting_type_relax{
+float: left;
+width: 135px;
+background-color: khaki;
+height: 30px;
+border-radius: 45px;
+text-align: center;
+font-weight: 700;
+font-size: 20px;
+margin-left: 20px;
+margin-top: 10px;
+}
+.meeting_sort{
+float: left;
+width: 50px;
+background-color: red;
+height: 25px;
+text-align: center;
+border-radius: 45px;
+font-size: 16px;
+font-weight: 700;
+margin-left: 20px;
+margin-top: 10px;
+margin-right: 15px;
+}
+/* 加急红色，比赛蓝色，外包黄色，组会粉色，全体大会紫色 */
+.hurry{
+  background-color: rgb(245, 4, 4);
+}
+.competition{
+  background-color: rgb(139, 139, 243);
+}
+.outsourcing{
+  background-color: rgb(252, 252, 0);
+}
+.organize{
+  background-color: pink;
+}
+.general_meeting{
+  background-color: rebeccapurple;
+}
+.page_control{
+  height: 50px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.meeting_tag{
+height: 120px;
+  width: 200px;
+  float: left;
+}
+.All_meeting_header{
+  height: 50px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.All_meeting_header li{
+ float: left;
+   height: 50px;
+   line-height: 50px;
+   font-size: 20px;
+   font-weight: 700;
+   margin-left: 70px;
+}
+.All_meeting_header li:nth-of-type(2){
+margin-left: 120px;
+margin-right: 90px;
+}
+.All_meeting_header li:nth-of-type(3){
+margin-right: 20px;
+}
+.All_meeting_header li:nth-of-type(4){
+margin-right: 20px;
+}
+.All_meeting_header li:nth-of-type(5){
+margin-right: 5px;
+}
+.All_meeting_header li:nth-of-type(7){
+margin-bottom: 0px;
+}
+.meeting_time{
+float: left;
+height: 100px;
+margin-top: 10px;
+margin-right: 20px;
+}
+.give_a_like,.give_a_commit{
+  float: left;
+  height: 120px;
+  line-height: 120px;
+  width: 60px;
+  margin-left: 13px;
+  font-size: 28px;
+}
+.give_a_like{
+  margin-right: 42px;
+}
+.page_control_left,.page_control_right{
+  display: inline-block;
+  float: left;
+width: 30px;
+height: 30px;
+margin-top: 10px;
+margin-left: 30px;
+}
+.page_control{
+line-height: 50px;
+}
+.page_control_botton{
+  width: 300px;
+  line-height: 50px;
+  height: 50px;
+}
+.page{
+  display: inline-block;
+  float: left;
+  margin-left:10px;
+}
+.page_control_right{
+  margin-left: 10px;
+}
+.header{
+  position: fixed;
+background-color: rgb(255, 255, 255);
+width: 100vw;
+height: 40px;
+top:0;
+line-height: 40px;
+box-shadow: 5px 5px 5px rgb(241, 241, 241);
+}
+.header .submit_meeting{
+float: right;
+width: 100px;
+height: 40px;
+line-height: 40px;
+text-align: center;
+background-color: rgb(252, 139, 171);
+border-radius: 10px;
+color: white;
+margin-right: 20px;
+margin-right: 50px;
+cursor: pointer;
+}
+.user_information{
+  float: right;
+  width: 40px;
+  height: 40px;
+  background-color: saddlebrown;
+  margin-right: 30px;
+  border-radius: 180px;
+}
+.user_image{
+  border-radius: 50%;
+}
+
+.user_information:hover{
+  position: relative;
+  z-index: 2;
+animation:user_image_change 1s forwards  ;
+}
+.user_information:hover+.user_information_show{
+  display: block;
+  opacity: 0;
+animation: user_image_show 1s forwards;
+}
+.user_information_show{
+position: fixed;
+border: 1px solid;
+width: 150px;
+word-wrap: break-word;
+background-color: white;
+top: 45px;
+right: 110px;
+z-index: 0;
+display: block;
+text-align: center;
+padding-top: 30px;
+display: none;
+opacity: 0;
+}
+
+@keyframes user_image_change{
+0%{
+
+}
+100%{
+   margin-top: 20px;
+  transform: scale(2);
+}
+}
+@keyframes user_image_show{
+0%{
+  opacity: 0;
+}
+100%{
+   opacity: 1;
+}
+
+}

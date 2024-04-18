@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/submit.css">
+</head>
+
+<body>
+    <div class="left_header">
+        <h1 class="QG_title">QG会议纪要</h1>
+        <h1 class="QG_title">用户系统</h1>
+        <div class="user_information_change_title_left_header user_information_change_title_left_header_choose"><span
+                class="iconfont ">&#xe7ae;
+            </span>用户信息</div>
+        <div class="meeting_submit_title_left_header"><span class="iconfont">&#xe7ef;
+            </span>上传会议</div>
+    </div>
+    <div class="right_content">
+        <!-- 修改用户信息的模块 -->
+        <div class="change_user_information show">
+            <h1 class="change_user_information_title">修改用户信息</h1>
+            <form>
+                <div class="inputBox">
+                    <span>姓名:</span>
+                    <input type="text" placeholder="长度1——10" class="name" ds>
+                </div>
+                <div class="inputBox">
+                    <span>旧密码:</span>
+                    <input type="password" placeholder="由数字，下划线,字母组成，且6——12位" class="oldpassword">
+                </div>
+                <div class="inputBox">
+                    <span>新密码:</span>
+                    <input type="password" placeholder="由数字，下划线,字母组成，且6——12位" class="newpassword">
+                </div>
+                <div class="inputBox">
+                    <span>头像:</span>
+                    <input type="file" class="change_user_information_img_file">
+                    <span class="user_information_image_show">头像预览:</span>
+                    <div class="user_information_image"><img src="../images/s3.jpg" class="user_image"></div>
+                </div>
+                <div class="inputBox">
+                    <span>性别:</span>
+                    <select class="gender">
+                        <option value="man" class="man">男</option>
+                        <option value="woman" class="woman">女</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <span>年纪:</span>
+                    <input type="number" class="age">
+                </div>
+                <div class="inputBox">
+                    <span>组别:</span>
+                    <select class="group">
+                        <option value="none_group" class="none_group">暂无</option>
+                        <option value="front_group" class="front_group">前端组</option>
+                        <option value="backstage_group" class="backstage_group">后台组</option>
+                        <option value="embedded_group" class="embedded_group">嵌入式组</option>
+                        <option value="move_group" class="move_group">移动组</option>
+                        <option value="AI_group" class="AI_group">人工智能组</option>
+                        <option value="graph_group" class="graph_group"> 图形组</option>
+                        <option value="design_group" class="design_group">设计组</option>
+                    </select>
+                </div>
+                <div class="inputBox_Click">
+                    <input type="submit" value="修改" class="change_information_button">
+                </div>
+            </form>
+        </div>
+        <!-- 修改用户信息的模块 -->
+        <!-- 上传会议纪要的模块 -->
+        <div class="submit_meeting_information ">
+            <h1 class="submit_meeting_information_title">提交会议纪要</h1>
+            <form>
+                <div class="inputBox">
+                    <span>会议主题:</span>
+                    <input type="text" placeholder="" class="meeting_title">
+                </div>
+                <div class="inputBox">
+                    <span>会议内容:</span>
+                    <textarea name="meeting_content" id="" cols="89" rows="10"></textarea>
+                </div>
+                <div class="inputBox">
+                    <span>会议照片:</span>
+                    <input type="file" class="submit_meeting_information_img_file">
+                    <span class="meeting_image_show">会议照片预览:</span>
+                    <div class=""><img src="../images/s3.jpg" class="meeting_image"></div>
+                </div>
+                <div class="inputBox">
+                    <span>个人纪要:</span>
+                    <input type="file" class="txt_file" placeholder=""> <br />
+                    <p>要求txt文件</p>
+                </div>
+                <div class="inputBox">
+                    <span>会议类型:</span>
+                    <div class="meeting_type_work"><span>办公</span></div>
+                    <div class="meeting_type_relax"><span>康乐</span></div>
+                </div>
+                <div class="inputBox tag">
+                    <span>会议标签:</span>
+                    <div class="meeting_tag hurry "><span id=1>加急</span></div>
+                    <div class="meeting_tag competition "><span id=2>比赛</span></div>
+                    <div class="meeting_tag outsourcing "><span id=3>外包</span></div>
+                    <div class="meeting_tag organize "><span id=4>组会</span></div>
+                    <div class="meeting_tag general_meeting "><span id=5>全体大会</span></div>
+                    <p class="limit">0/3</p>
+                </div>
+                <div class="inputBox_Click">
+                    <input type="submit" value="修改" class="">
+                </div>
+            </form>
+        </div>
+        <!-- 上传会议纪要的模块 -->
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../static/submit.js"></script>
+</body>
+
+</html>

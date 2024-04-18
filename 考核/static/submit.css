@@ -1,0 +1,378 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+li{
+   list-style: none;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont.woff2?t=1713150373059') format('woff2'),
+       url('iconfont.woff?t=1713150373059') format('woff'),
+       url('iconfont.ttf?t=1713150373059') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.clearfix::after{
+ content: "";
+ display: block;
+ height: 0;
+ clear: both;
+ visibility: hidden;
+}
+.left_header{
+float: left;
+width: 14%;
+height: 110vh;
+background-color: rgb(0, 31, 53);
+}
+.QG_title{
+    color: rgb(217, 115, 73);
+}
+.QG_title:first-child{
+   padding-top: 10px;
+   margin-left: 0.5em;
+}
+.QG_title:nth-child(2){
+      margin-left: 1.1em;
+}
+.user_information_change_title_left_header,.meeting_submit_title_left_header{
+ color: white;
+ width: 100%;
+ height: 80px;
+ line-height: 80px;
+ text-align: center;
+ font-size: 24px;
+}
+.user_information_change_title_left_header:hover{
+   font-size: 26px;
+    cursor: pointer;
+}
+.meeting_submit_title_left_header:hover{
+       font-size: 26px;
+    cursor: pointer;
+}
+.right_content{
+    float: left;
+    width: 86%;
+}
+.user_information_change_title_left_header{
+    margin-top: 50px;
+}
+.left_header .iconfont{
+    font-size: 24px;
+}
+.show{
+    display: block !important;
+}
+.hidden{
+    display: none !important;
+}
+.inputBox{
+    position: relative;
+margin-left: 60px;
+height: 70px;
+line-height: 70px;
+font-size: 20px;
+margin-top: 40px;
+width: 1300px;
+box-shadow: 6px 6px 5px rgb(233, 233, 233);
+}
+.user_information_image_show{
+    display: inline-block;
+}
+.user_information_image_show{
+    float: left;
+}
+.user_information_image{
+position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 180px;
+left: 545px;
+top: -5px;
+z-index: 5;
+}
+.change_user_information .inputBox:nth-child(2) input,.change_user_information .inputBox:nth-child(3) input{
+width: 400px;
+}
+.inputBox:nth-child(4) span,.inputBox:nth-child(4) input{
+    float: left;
+    line-height: 70px;
+    margin-right: 20px;
+}
+
+.user_information_image:hover{
+    animation:user_image_change 1s linear forwards
+    
+}
+@keyframes user_image_change{
+0%{
+}
+100%{
+   margin-top: 20px;
+  transform: scale(2);
+}
+}
+.user_image{
+  border-radius: 50%;
+}
+.inputBox:nth-child(1) span,.inputBox:nth-child(4) span,.inputBox:nth-child(5) span,.inputBox:nth-child(6) span,.inputBox:nth-child(7) span{
+    margin-right: 2em;
+}
+.inputBox:nth-child(2) span,.inputBox:nth-child(3) span{
+    margin-right: 1em;
+}
+.name{
+    width: 200px;
+    height: 30px;
+}
+.oldpassword,.newpassword{
+     width: 250px;
+    height: 30px;
+}
+.gender{
+    width: 50px;
+    height: 20px;
+}
+.age{
+    width: 50px;
+    height: 20px;
+}
+.group{
+      width: 90px;
+    height: 30px
+}
+.change_user_information_title,.submit_meeting_information_title{
+    width: 100%;
+    background-color: rgb(0, 31, 53);
+    box-shadow: 4px 3px 5px rgb(233, 233, 233);
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    text-indent: 2em;
+}
+.inputBox_Click input{
+    width: 150px;
+    height: 60px;
+  margin-top: 30px;
+  margin-left: 1215px;
+  border-radius: 10px;
+ border: none;
+ background-color: rgb(0, 174, 236);
+ color: white;
+ font-size: 24px;
+ font-weight: 700;
+ cursor: pointer;
+}
+.inputBox input{
+    font-size: 17px;
+}
+.submit_meeting_information .inputBox input{
+    width: 600px;
+}
+.submit_meeting_information .inputBox span{
+    margin-right: 2em ; 
+}
+.submit_meeting_information .inputBox:nth-of-type(1) input{
+  
+    height: 30px;
+}
+.submit_meeting_information .inputBox:nth-of-type(2)
+{
+    height: 180px;
+    line-height: 180px;
+
+}
+.submit_meeting_information .inputBox:nth-of-type(2) span{
+    float: left;
+  margin-right: 2em;
+}
+
+textarea{
+    outline: none;
+    resize: none;
+
+}
+
+.submit_meeting_information .inputBox:nth-of-type(3) span:first-child,.submit_meeting_information .inputBox:nth-of-type(3) input{
+float: left;
+}
+.submit_meeting_information .inputBox:nth-of-type(3){
+    height: 150px;
+    line-height: 150px;
+}
+.submit_meeting_information .inputBox:nth-of-type(3) input{
+    line-height: 150px;
+    margin-right: 20px;
+    width: 400px;
+}
+.submit_meeting_information .inputBox:nth-of-type(3) span{
+  margin-right: 2em;
+}
+.meeting_image_show,.meeting_image{
+    float: left;
+    line-height: 140px;
+}
+.meeting_image{
+    width: 240px;
+    height: 140px;
+}
+.submit_meeting_information .inputBox:nth-of-type(4)
+{
+    position: relative;
+    line-height: 0px;
+    height: 90px;
+}
+.submit_meeting_information .inputBox:nth-of-type(6)
+{
+    position: relative;
+    
+}
+.submit_meeting_information .inputBox:nth-of-type(4) span
+{
+    height: 50px;
+   
+}
+.submit_meeting_information .inputBox:nth-of-type(5) span
+{
+    margin-right: 19px;
+   
+}
+.submit_meeting_information .inputBox:nth-of-type(6) span
+{
+  margin-right: 19px;
+}
+.submit_meeting_information .inputBox:nth-of-type(4) p{
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  font-size: 14px;
+  word-wrap:break-word;
+  bottom: 20px;
+  left: 5px;
+}
+.submit_meeting_information .inputBox:nth-of-type(6) p{
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  font-size: 14px;
+  word-wrap:break-word;
+  bottom: 40px;
+  left: 32px;
+}
+.submit_meeting_information .inputBox span
+{
+    float: left;
+}
+.meeting_type_work,.meeting_type_relax,.meeting_tag{
+position: relative;
+float: left;
+width: 180px;
+height: 45px;
+border-radius: 10px;
+text-align: center;
+font-weight: 700;
+font-size: 20px;
+margin-left: 20px;
+margin-top: 10px;
+margin-right: 30px;
+line-height: 40px;
+overflow: hidden;
+cursor: pointer;
+}
+.meeting_tag{
+    width: 120px;
+}
+.meeting_type_relax::before{
+background-color: green;
+}
+.meeting_type_work::before{
+background-color: khaki;
+}
+
+.meeting_type_relax::before,.meeting_type_work::before,.meeting_tag::before{
+content: '';
+width:calc(100% - 8px);
+height: calc(100% - 8px);
+border-radius: 10px;
+position: absolute;
+top:4px;
+left: 4px;
+z-index: 2;
+}
+.meeting_type_choose::after{
+content: '';
+width: 300%;
+height: 300%;
+background-image: conic-gradient(#EEEEEE22,#fc97e9,#e7d0fe,#cca9fd,#02eded,#adf674,#fefe05,#fec900,#EEEEEE22 60%);
+border-radius: 10px;
+position: absolute;
+top: -100%;
+left: -100%;
+z-index: 1;
+animation: rotate 5s linear infinite;
+}
+.meeting_tag_choose::after{
+content: '';
+width: 300%;
+height: 300%;
+background-image: conic-gradient(#EEEEEE22,#fc97e9,#e7d0fe,#cca9fd,#02eded,#adf674,#fefe05,#fec900,#EEEEEE22 60%);
+border-radius: 10px;
+position: absolute;
+top: -100%;
+left: -100%;
+z-index: 1;
+animation: rotate 5s linear infinite;
+}
+@keyframes rotate{
+ 100%{
+     transform: rotate(360deg);
+ }
+}
+.meeting_type_work span,.meeting_type_relax span,.meeting_tag span{
+ position: absolute;
+top:0px;
+left: 0px;
+width: 100%;
+text-align: center;
+z-index: 10;
+}
+.hurry::before{
+  background-color: rgb(245, 4, 4);
+  
+}
+.competition::before{
+  background-color: rgb(139, 139, 243);
+}
+.outsourcing::before{
+  background-color: rgb(252, 252, 0);
+}
+.organize::before{
+  background-color: pink;
+}
+.general_meeting::before{
+  background-color: rebeccapurple;
+}
+.return{
+    position: absolute;
+    color: rgb(217, 115, 73);
+    font-size: 30px;
+    font-weight: 700;
+}
+.user_information_change_title_left_header_choose{
+    background-color: rgb(5, 41, 66);
+    color: rgb(212, 212, 67);
+}
+.change_user_information,.submit_meeting_information {
+    display: none;
+}
