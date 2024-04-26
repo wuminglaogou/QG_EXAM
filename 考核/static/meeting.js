@@ -98,8 +98,15 @@ xhr1.addEventListener('loadend', () => {
     Orignalresponse = response.date
     console.log(Orignalresponse)
     //身份和情况判断
-    if (localStorage.getItem('manager') == `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9` || (Orignalresponse.writername == localStorage.getItem('user_name')) && Orignalresponse.status == -1)
+    console.log(Orignalresponse)
+    if (localStorage.getItem('manager') == `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9` || ((Orignalresponse.user_name == localStorage.getItem('user_name')) && (Orignalresponse.status == -1))) {
+        console.log(`!!!!!`)
         document.querySelector('.manager_button').classList.add('show')
+        if (Orignalresponse.status == -1) {
+            document.querySelector('.delete').classList.add('hidden')
+            console.log(`555555`)
+        }
+    }
 })
 xhr1.setRequestHeader('Authorization', `${localStorage.getItem('token')} `)
 xhr1.setRequestHeader('Content-Type', 'application/json')

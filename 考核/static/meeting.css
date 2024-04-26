@@ -588,6 +588,11 @@ margin-left: 28px;
   padding-bottom: 40px;
 }
 .manager_button{
-
   margin-left: 380px;
+}
+.show5{
+  display: block
+}
+.hidden{
+  display: none !important
 }
