@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server"
   },
   "keywords": [],
   "author": "",
@@ -11,16 +12,21 @@
   "description": "",
   "dependencies": {
     "@escook/express-joi": "^1.1.1",
+    "add": "^2.0.6",
     "axios": "^1.6.8",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
+    "busboy": "^1.6.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "express-jwt": "^5.3.3",
+    "express-ws": "^5.0.2",
     "joi": "^17.12.3",
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.1",
     "mysql": "^2.18.1",
-    "qs": "^6.12.1"
+    "nodejs-websocket": "^1.7.2",
+    "qs": "^6.12.1",
+    "yarn": "^1.22.22"
   }
 }

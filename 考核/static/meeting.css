@@ -1,0 +1,593 @@
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+li{
+   list-style: none;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+.show{
+display: block !important;
+
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont.woff2?t=1713150373059') format('woff2'),
+       url('iconfont.woff?t=1713150373059') format('woff'),
+       url('iconfont.ttf?t=1713150373059') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.clearfix::after{
+ content: "";
+ display: block;
+ height: 0;
+ clear: both;
+ visibility: hidden;
+}
+.header{
+  position: fixed;
+background-color: rgb(255, 255, 255);
+width: 100vw;
+height: 40px;
+top:0;
+line-height: 40px;
+box-shadow: 5px 5px 5px rgb(241, 241, 241);
+}
+.header .submit_meeting{
+float: right;
+width: 100px;
+height: 40px;
+line-height: 40px;
+text-align: center;
+background-color: rgb(252, 139, 171);
+border-radius: 10px;
+color: white;
+margin-right: 20px;
+margin-right: 50px;
+cursor: pointer;
+}
+.user_information{
+  float: right;
+  width: 40px;
+  height: 40px;
+  background-color: saddlebrown;
+  margin-right: 30px;
+  border-radius: 180px;
+}
+.user_image{
+  border-radius: 50%;
+}
+
+.user_information:hover{
+  position: relative;
+  z-index: 2;
+animation:user_image_change 1s forwards  ;
+}
+.user_information:hover+.user_information_show{
+  display: block;
+  opacity: 0;
+animation: user_image_show 1s forwards;
+}
+.user_information_show{
+position: fixed;
+border: 1px solid;
+width: 150px;
+word-wrap: break-word;
+background-color: white;
+top: 45px;
+right: 205px;
+z-index: 0;
+display: block;
+text-align: center;
+padding-top: 30px;
+display: none;
+opacity: 0;
+}
+
+@keyframes user_image_change{
+0%{
+
+}
+100%{
+   margin-top: 20px;
+  transform: scale(2);
+}
+}
+@keyframes user_image_show{
+0%{
+  opacity: 0;
+}
+100%{
+   opacity: 1;
+}
+}
+.return{
+    float: right;
+    width: 50px;
+   margin-right: 30px;
+   font-size: 20px;
+   cursor: pointer;
+}
+.meeting_title{
+    margin-top: 20px;
+    word-wrap: break-word;
+    margin-bottom: 15px;
+}
+.meeting_all{
+    width: 50vw;
+    height: auto;
+   background-color: white;
+   /* box-shadow: 5px 5px 5px black; */
+    margin: 0 auto;
+    margin-top: 160px;
+    padding-bottom: 50px;
+}
+.writer_img{
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.writer{   
+    height: 50px;
+   margin-bottom: 20px;
+    
+}
+.writer_name{
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+h2{
+margin-bottom: 10px;
+}
+h2:nth-of-type(2){
+    margin-top: 40px;
+}
+.minutes{
+    background-color: rebeccapurple;
+}
+body{
+  background-color: rgb(244, 246, 249);
+}
+.manager_button{
+    width: 50vw;
+    margin: 0 auto;
+    margin-top: 50px;
+  
+}
+.manager_button span{
+  display: inline-block;
+width: 80px;
+font-size: 25px;
+margin-left: 100px;
+cursor: pointer;
+}
+.manager_button span:first-of-type{
+  margin-left: 260px;
+}
+
+.change_div{
+  position: fixed;
+  background-color: rgba(244, 246, 249);
+  width: 50vw;
+  height: 680px;
+  top:100px;
+  left:50%;
+  transform: translateX(-50%);
+  display: none;
+}
+textarea{
+    outline: none;
+    resize: none;
+}
+.inputBox .meeting_span{
+  display: inline-block;
+  width: 72px;
+  height: 30px;
+  float: left;
+  
+}
+.meeting_image{
+  width: 100px;
+  height: 60px;
+ position: absolute;
+ right: 310px;
+ top: 0px;
+}
+.inputBox{
+  position: relative;
+  background-color: white;
+}
+.inputBox:nth-of-type(3){
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 60px;
+}
+.inputBox:nth-of-type(4) p{
+  font-size: 12px;
+  text-indent: 2px;
+  margin-bottom: 20px;
+}
+.inputBox:nth-of-type(5){
+position: relative;
+float: left;
+}
+.inputBox:nth-of-type(5){
+  float: left;
+  margin-bottom: 20px;
+}
+.inputBox:nth-of-type(6){
+  float: left;
+}
+.meeting_type_work,.meeting_type_relax,.meeting_tag{
+position: relative;
+float: left;
+width: 180px;
+height: 45px;
+border-radius: 10px;
+text-align: center;
+font-weight: 700;
+font-size: 20px;
+margin-left: 20px;
+margin-top: 10px;
+margin-right: 30px;
+line-height: 40px;
+overflow: hidden;
+cursor: pointer;
+}
+.meeting_tag{
+    width: 120px;
+}
+.meeting_type_relax::before{
+background-color: green;
+}
+.meeting_type_work::before{
+background-color: khaki;
+}
+
+.meeting_type_relax::before,.meeting_type_work::before,.meeting_tag::before{
+content: '';
+width:calc(100% - 8px);
+height: calc(100% - 8px);
+border-radius: 10px;
+position: absolute;
+top:4px;
+left: 4px;
+z-index: 2;
+}
+.meeting_type_choose::after{
+content: '';
+width: 300%;
+height: 300%;
+background-image: conic-gradient(#EEEEEE22,#fc97e9,#e7d0fe,#cca9fd,#02eded,#adf674,#fefe05,#fec900,#EEEEEE22 60%);
+border-radius: 10px;
+position: absolute;
+top: -100%;
+left: -100%;
+z-index: 1;
+animation: rotate 5s linear infinite;
+}
+.meeting_tag_choose::after{
+content: '';
+width: 300%;
+height: 300%;
+background-image: conic-gradient(#EEEEEE22,#fc97e9,#e7d0fe,#cca9fd,#02eded,#adf674,#fefe05,#fec900,#EEEEEE22 60%);
+border-radius: 10px;
+position: absolute;
+top: -100%;
+left: -100%;
+z-index: 1;
+animation: rotate 5s linear infinite;
+}
+@keyframes rotate{
+ 100%{
+     transform: rotate(360deg);
+ }
+}
+.meeting_type_work span,.meeting_type_relax span,.meeting_tag span{
+ position: absolute;
+top:0px;
+left: 0px;
+width: 100%;
+text-align: center;
+z-index: 10;
+}
+.hurry::before{
+  background-color: rgb(245, 4, 4);
+  
+}
+.competition::before{
+  background-color: rgb(139, 139, 243);
+}
+.outsourcing::before{
+  background-color: rgb(252, 252, 0);
+}
+.organize::before{
+  background-color: pink;
+}
+.general_meeting::before{
+  background-color: rebeccapurple;
+}
+.inputBox:nth-of-type(6){
+  position: relative;
+}
+.limit{
+  position:absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 70px;
+}
+.inputBox_Click input{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+  margin-top: 20px;
+  margin-left: 345px;
+  border-radius: 5px;
+ border: none;
+ background-color: rgb(15, 14, 15);
+ color: white;
+ font-size: 24px;
+ font-weight: 700;
+ cursor: pointer;
+ z-index: 20;
+ position: relative;
+}
+.inputBox{
+  box-shadow: 6px 6px 5px rgb(233, 233, 233);
+}
+.inputBox:nth-of-type(1){
+  margin-bottom: 20px;
+  line-height: 100%;
+}
+.inputBox:nth-of-type(2){
+  margin-bottom: 40px;
+}
+.inputBox:nth-of-type(4){
+  margin-bottom: 50px;
+  height: 50px;
+}
+.inputBox:nth-of-type(3){
+  margin-bottom: 50px;
+  
+}
+.inputBox:nth-of-type(5){
+  margin-bottom: 40px;
+  width: 100%;
+}
+.close{
+  font-size: 30px;
+  position: absolute;
+  top: -40px;
+  right: 0px;
+  cursor: pointer;
+}
+.manager_button{
+  display: none;
+}
+
+.commit h1{
+  margin-top: 50px;
+  text-indent: 10.7em;
+}
+.writer_img{
+  border-radius: 90px;
+}
+.user_commit_top{
+  margin:0 auto;
+  margin-top: 20px;
+ width: 60vw;
+ position: relative;
+}
+.user_commit_top_img{
+  float: left;
+  width: 70px;
+  height: 70px;
+  border-radius: 90px;
+  margin-top: 15px;
+}
+.user_commit_top_textarea{
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.user_commit_top_button{
+  background-color: rgb(127, 214, 245);
+  color: white;
+  border: none;
+  width: 70px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  z-index: 2;
+  right:115px;
+  top: 85px;
+  cursor: pointer;
+}
+
+.split{
+  background-color: saddlebrown;
+   width: 58vw;
+  margin-top: 70px;
+  margin-left: 320px;
+  border: 1px solid black;
+}
+.commit_under{
+    margin-top: 30px;
+   width: 58vw;
+ margin-left: 320px;
+}
+.user_commit_under_img{
+  float: left;
+  width: 50px;
+  height: 50px;
+  border-radius: 90px;
+}
+.user_commit_under_name{
+  margin-left: 10px;
+}
+.user_commit_under_content{
+
+  margin-left: 60px;
+  margin-top: 5px;
+  word-wrap:  break-word;
+}
+.commit_reply{
+  margin-left: 50px;
+}
+.commit_reply_div{
+
+  padding-bottom: 30px;
+}
+.commit_first{
+ 
+  padding-bottom: 20px;
+}
+.commit_list li{
+  position: relative;
+}
+.commit_respond,.commit_respond_big,.commit_respond_small{
+  position: absolute;
+  color: rgb(154, 159, 165);
+  cursor: pointer;
+  right: 0;
+  bottom: 0px;
+}
+.input_commit,.input_commit_big,.input_commit_small{
+  position: relative;
+  margin-left: 50px;
+  margin-top: 20px;
+  background-color: beige;
+  padding-bottom:40px;
+}
+.input_commit textarea{
+  margin-left: 10px;
+}
+.input_commit button,.user_commit_under_button_big,.user_commit_under_button_small{
+position: absolute;
+  background-color: rgb(127, 214, 245);
+  color: white;
+  border: none;
+  width: 60px;
+  height: 40px;
+  font-size: 19px;
+  font-weight: 700;
+  position: absolute;
+  z-index: 2;
+  right:58px;
+  bottom: 0px;
+  cursor: pointer;
+}
+.commit_reply .user_commit_under_button,.user_commit_under_button_big{
+right: 68px;
+}
+.input_commit,.input_commit_big,.input_commit_small{
+  display: none;
+}
+.show0{
+  display: block !important;
+}
+.commit_reply_div{
+  position: relative;
+}
+.meeting_title_h1,.meeting_content1{
+  word-wrap:break-word;
+}
+.meeting_content2{
+  margin-top: 30px;
+}
+.page{
+  position: absolute;
+  bottom: 0;
+  left: 280px;
+}
+.meeting_all{
+  position: relative;
+}
+
+.bookmark{
+  position: absolute;
+  left: 350px;
+  top: 100px;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+
+  cursor: pointer;
+}
+.header{
+  z-index: 100;
+}
+.click_bookmark{
+  color: rgb(204, 204, 51);
+}
+
+.commit_reply .commit_reply_div:nth-of-type(n+2){ 
+margin-left: 40px;
+}
+.commit_reply .user_commit_under_textarea_small{
+margin-left: 28px;
+}
+.commit_reply .commit_reply_div:nth-of-type(n+2) .user_commit_under_button_small{
+  transform: translateX(60px);
+ 
+}
+.commit_reply .commit_reply_div:nth-of-type(1) .user_commit_under_button_small{
+  transform: translateX(20px);
+ 
+}
+.commit_list{
+  border-bottom: 1px solid rgb(195, 199, 202);
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+}
+.commit_respond_small:hover,.commit_respond_big:hover{
+  color: rgb(140, 236, 255);
+}
+.change_div{
+  top: 40px;
+  padding: 60px;
+  padding-bottom: 100px;
+  border: 1px black solid;
+  z-index: 1000;
+}
+.tag{
+  height: 150px;
+}
+.limit{
+  width: 100px;
+}
+.meeting_submit_button{
+  bottom: 20px;
+}
+.close{
+  top: 0px;
+}
+.meeting_title_h1{
+ 
+  margin-bottom: 20px;
+}
+.meeting_all{
+  margin-top: 100px;
+  padding: 20px;
+}
+.meeting_content2{
+  padding-bottom: 40px;
+}
+.manager_button{
+
+  margin-left: 380px;
+}

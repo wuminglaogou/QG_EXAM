@@ -11,10 +11,11 @@ img{
 }
 @font-face {
   font-family: 'iconfont';
-  src: url('iconfont.woff2?t=1713150373059') format('woff2'),
-       url('iconfont.woff?t=1713150373059') format('woff'),
-       url('iconfont.ttf?t=1713150373059') format('truetype');
+  src: url('iconfont.woff2?t=1713774819824') format('woff2'),
+       url('iconfont.woff?t=1713774819824') format('woff'),
+       url('iconfont.ttf?t=1713774819824') format('truetype');
 }
+
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;
@@ -32,7 +33,7 @@ img{
 .left_header{
 float: left;
 width: 14%;
-height: 110vh;
+height: 115vh;
 background-color: rgb(0, 31, 53);
 }
 .QG_title{
@@ -375,4 +376,381 @@ z-index: 10;
 }
 .change_user_information,.submit_meeting_information {
     display: none;
+}
+.top_image,.change_user_information_img_file,.user_information_image_show,.user_information_image.image_submit{
+float: left;
+}
+.first{
+    line-height: 70px;
+    
+}
+.change_user_information_img_file{
+    float: left;
+    margin-top: 20px;
+}
+.image_submit{
+    float: left;
+     margin-top: 5px;
+     width: 100px;
+     height: 50px;
+     margin-left: 350px;
+     font-size: 30px;
+}
+.accept_meeting_right,.my_meeting_right{
+    display: none;
+    
+}
+.All_meeting{
+margin: 0  auto;
+margin-top: 15px;
+width: 1000px;
+border: 1px solid black;
+margin-top: 50px;
+}
+.All_meeting h1{
+  text-align: center;
+  border: 1px solid black;
+border-collapse: collapse;
+} 
+.All_meeting_middle li, .All_meeting_middle_my li{
+border: 1px solid black;
+border-collapse: collapse;
+height: 120px;
+background-color: aliceblue;
+padding-top: 15px;
+}
+.All_meeting_img{
+  float: left;
+  width: 150px;
+  height: 100px;
+}
+
+.All_meeting_content,.All_meeting_content_my{
+ float: left;
+  margin-top: 0px;
+  margin-left: 20px;
+  width: 410px;
+  height: 100px;
+  margin-bottom: 0px;
+}
+.All_meeting_introduce,.All_meeting_introduce_my{
+    float: left;
+    margin-left: 20px;
+    font-size: 19px;
+    word-wrap: break-word;
+    width: 230px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.meeting_type_work_manager,.meeting_type_relax_manager{
+float: left;
+width: 135px;
+background-color: khaki;
+height: 30px;
+border-radius: 45px;
+text-align: center;
+font-weight: 700;
+font-size: 20px;
+margin-left: 20px;
+margin-top: 0px;
+}
+.meeting_type_relax_manager{
+background-color: green;
+}
+.meeting_sort_manager{
+float: left;
+width: 50px;
+background-color: red;
+height: 25px;
+text-align: center;
+border-radius: 45px;
+font-size: 16px;
+font-weight: 700;
+margin-left: 20px;
+margin-top: 10px;
+margin-right: 15px;
+
+}
+/* 加急红色，比赛蓝色，外包黄色，组会粉色，全体大会紫色 */
+.hurry_manager_manager{
+  background-color: rgb(245, 4, 4);
+}
+.competition_manager{
+  background-color: rgb(139, 139, 243);
+}
+.outsourcing_manager{
+  background-color: rgb(252, 252, 0);
+}
+.organize_manager{
+  background-color: pink;
+}
+.general_meeting_manager{
+  background-color: rebeccapurple;
+}
+.page_control_manager{
+  height: 50px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.meeting_tag_manager{
+height: 120px;
+  width: 200px;
+  float: left;
+}
+.All_meeting_header{
+  height: 50px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  ;
+}
+.All_meeting_header li{
+ float: left;
+   height: 50px;
+   line-height: 50px;
+   font-size: 20px;
+   font-weight: 700;
+   margin-left: 70px;
+}
+.All_meeting_header li:nth-of-type(2){
+margin-left: 80px;
+margin-right: 180px;
+}
+.All_meeting_header li:nth-of-type(3){
+margin-right: 20px;
+}
+.All_meeting_header li:nth-of-type(4){
+margin-right: 95px;
+}
+
+.meeting_time{
+float: left;
+margin-top: 10px;
+margin-right: 20px;
+margin-left: 50px;
+}
+/* .give_a_like,.give_a_commit{
+  float: left;
+  height: 120px;
+  line-height: 120px;
+  width: 60px;
+  margin-left: 13px;
+  font-size: 28px;
+}
+.give_a_like{
+  margin-right: 42px;
+} */
+.page_control_left,.page_control_right{
+    float: left;
+width: 30px;
+height: 30px;
+margin-left: 30px;
+margin-top: 10px;
+}
+.page_control_left_my,.page_control_right_my{
+    float: left;
+width: 30px;
+height: 30px;
+margin-left: 30px;
+margin-top: 10px;
+}
+.page_control_botton,.page_control_botton_my{
+  width: 300px;
+  line-height: 50px;
+  height: 50px;
+}
+.page,.page_my{
+ 
+  float: left;
+  margin-left:10px;
+
+}
+.page_control_right,.page_control_right_my{
+  margin-left: 10px;
+}
+.audit{
+    float: left;
+    width: 180px;
+    height: 120px;
+   line-height: 80px;
+}
+.agree,.reject,.wait{
+    position: relative;
+    float: left;
+    margin-left: 35px;
+    width: 30px;
+    cursor: pointer;
+    background-color: red;
+    height: 30px;
+    border-radius: 45px;
+    margin-top: 25px
+}
+.audit span{
+    position: absolute;
+    font-size: 36px;
+    top: -25px;
+    left: -2px;
+    z-index: 100;
+} 
+.agree{
+    background-color: green;
+}
+.wait{
+    background-color: rgb(241, 245, 12);
+}
+.no_meeting{
+  text-align: center;
+font-size: 38px;
+line-height: 100px;
+}
+.meeting_time{
+
+  height: 60px;
+  word-wrap: break-word;
+  width: 90px;
+}
+.return{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: white;
+  cursor: pointer;
+}
+.return:hover{
+  font-size: 34px;
+}
+.audit_my{
+  margin-left: 30px;
+ 
+  width: 0px;
+}
+.QA_BOX{
+  width:80vw;
+  height: 50vh;
+  margin-top: 70px;
+  margin-left: 5vw;
+
+}
+.QA_BOX h2{
+  text-align: center;
+}
+.input{
+  margin-left: 300px;
+margin-top: 20px;
+font-size: 30px;
+}
+.input textarea{
+  font-size: 25px;
+}
+.count_word{
+  float: left;
+  width: 100px;
+   margin-left: 880px;
+   height: 50px;
+   line-height: 50px;
+   text-align: center;
+}
+.sendQuestion{
+  float: left;
+  width: 100px;
+  height: 50px;
+  background-color: rgb(45, 229, 253);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 0px;
+}
+.pass_QS_ul{
+  border: 1px solid black;
+  width: 70vw;
+  margin-left: 50px;
+  height: 400px;
+}
+.question,.answer,.question_manager,.answer_manager{
+margin:0 auto;
+width: 100%;
+height:120px;
+word-wrap: break-word;
+}
+.answer,.answer_manager{
+  height: 80px; 
+  background-color: rgb(226, 226, 81);
+}
+.pass_QS{
+  width: 200px;
+  margin-left: 16px;
+  margin-top: 100px;
+}
+.question_right{
+  display: none;
+}
+.question_image{
+height: 50px;
+  float: left;
+  width: 50px;
+}
+.question_image img{
+  border-radius: 180px;
+}
+.question_group{
+  margin-top: 5px;
+}
+.question_manager_text{
+  display: block;
+  margin-top: 15px;
+  text-align: left;
+height: 50px;
+overflow: auto; 
+height: 100px;
+}
+.question_manager{
+  height: auto;
+}
+.Answer_right{
+  display: none;
+}
+.answer_manager{
+  position: relative;
+}
+.send_answer{
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: rgb(34, 226, 240);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(250, 254, 255);
+  cursor: pointer;
+bottom: 0;
+right: 0;
+}
+.page_control_botton_my_pass{
+  width:200px;
+ margin-left: 65.4vw;
+  height:30px;
+}
+.page_control_botton_my_pass button,.page_my_past,.page_control_botton_my_pass_answer button,.page_my_past_answer{
+  float: left;
+}
+.Answer_QS{
+  width: 150px;
+}
+.Answer_now{
+  border: 1px solid black;
+  width: 70vw;
+  height: 720px;
+}
+.Answer_now li{
+margin-top: -15px;
+  background-color: wheat;
+}
+.page_control_my_pass0{
+  width: 200px;
+  height: 50px;
+  margin-left: 62.4vw;
 }

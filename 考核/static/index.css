@@ -24,6 +24,9 @@ img{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.show{
+  display: block !important;
+}
 .clearfix::after{
  content: "";
  display: block;
@@ -83,7 +86,8 @@ text-indent: 5px;
   margin-top: 100px;
   margin-bottom: 200px;
   transform-style: preserve-3d;
-  animation:rotate 20s linear infinite;
+  /* animation:rotate 1s  linear infinite; */
+  
 }
 .carouse_title{
   margin-top: 30px;
@@ -101,157 +105,77 @@ left: 0;
 }
 .carousel div:nth-child(1)
 {
-transform: translateZ(400px);
+transform: translateZ(350px);
 }
 .carousel div:nth-child(2)
 {
-transform:rotateY(60deg) translateZ(400px);
+transform:rotateY(60deg) translateZ(350px);
 }
 .carousel div:nth-child(3)
 {
-transform:rotateY(120deg) translateZ(400px);
+transform:rotateY(120deg) translateZ(350px);
 }
 .carousel div:nth-child(4)
 {
-transform:rotateY(180deg) translateZ(400px);
+transform:rotateY(180deg) translateZ(350px);
 }
 .carousel div:nth-child(5)
 {
-transform:rotateY(240deg) translateZ(400px);
+transform:rotateY(240deg) translateZ(350px);
 }
 .carousel div:nth-child(6)
 {
-transform:rotateY(300deg) translateZ(400px);
+transform:rotateY(300deg) translateZ(350px);
 }
 @keyframes rotate{
   0%{
     transform:rotateY(0)
   }
-   100%{
-    transform:rotateY(360deg)
+  100%{
+     transform:rotateY(60deg)
   }
+  /* 33%{
+     transform:rotateY(120deg)
+  }
+  50%{
+     transform:rotateY(180deg)
+  }
+  66%{
+     transform:rotateY(240deg)
+  }
+  83%{
+     transform:rotateY(300deg)
+  } */
+   /* 100%{
+    transform:rotateY(360deg)
+  } */
+}
+.change_image_left{
+  position: absolute;
+background-color: red;
+width: 540px;
+height: 485px;
+top: 100px;
+left: 50%;
+transform: translate(-100%);
+opacity: 0;
+cursor: pointer	;
+}
+.change_image_right{
+  position: absolute;
+background-color: blue;
+width: 540px;
+height: 485px;
+top: 100px;
+right: 50%;
+transform: translate(100%);
+cursor: pointer	;
+opacity: 0;
+
 }
 img{
   width: 100%;
   height: 100%;
-}
-.All_meeting{
-margin: 0  auto;
-margin-top: 30px;
-width: 1000px;
-border: 1px solid black;
-margin-bottom: 150px;
-}
-.All_meeting h1{
-  text-align: center;
-  border: 1px solid black;
-border-collapse: collapse;
-} 
-.All_meeting .All_meeting_middle li{
-border: 1px solid black;
-border-collapse: collapse;
-height: 120px;
-}
-.All_meeting .All_meeting_middle li .All_meeting_img{
-  float: left;
-  width: 150px;
-  height: 100px;
-}
-.All_meeting_content{
- float: left;
-  margin-top: 10px;
-  margin-left: 20px;
-  width: 410px;
-  height: 100px;
-}
-.All_meeting_introduce{
-    float: left;
-    margin-left: 20px;
-    font-size: 19px;
-    word-wrap: break-word;
-    width: 230px;
-    height: 100px;
-    overflow: hidden;
-}
-.meeting_type_work,.meeting_type_relax{
-float: left;
-width: 135px;
-background-color: khaki;
-height: 30px;
-border-radius: 45px;
-text-align: center;
-font-weight: 700;
-font-size: 20px;
-margin-left: 20px;
-margin-top: 10px;
-}
-.meeting_sort{
-float: left;
-width: 50px;
-background-color: red;
-height: 25px;
-text-align: center;
-border-radius: 45px;
-font-size: 16px;
-font-weight: 700;
-margin-left: 20px;
-margin-top: 10px;
-margin-right: 15px;
-}
-/* 加急红色，比赛蓝色，外包黄色，组会粉色，全体大会紫色 */
-.hurry{
-  background-color: rgb(245, 4, 4);
-}
-.competition{
-  background-color: rgb(139, 139, 243);
-}
-.outsourcing{
-  background-color: rgb(252, 252, 0);
-}
-.organize{
-  background-color: pink;
-}
-.general_meeting{
-  background-color: rebeccapurple;
-}
-.page_control{
-  height: 50px;
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-.meeting_tag{
-height: 120px;
-  width: 200px;
-  float: left;
-}
-.All_meeting_header{
-  height: 50px;
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-.All_meeting_header li{
- float: left;
-   height: 50px;
-   line-height: 50px;
-   font-size: 20px;
-   font-weight: 700;
-   margin-left: 70px;
-}
-.All_meeting_header li:nth-of-type(2){
-margin-left: 120px;
-margin-right: 90px;
-}
-.All_meeting_header li:nth-of-type(3){
-margin-right: 20px;
-}
-.All_meeting_header li:nth-of-type(4){
-margin-right: 20px;
-}
-.All_meeting_header li:nth-of-type(5){
-margin-right: 5px;
-}
-.All_meeting_header li:nth-of-type(7){
-margin-bottom: 0px;
 }
 .meeting_time{
 float: left;
@@ -302,6 +226,7 @@ height: 40px;
 top:0;
 line-height: 40px;
 box-shadow: 5px 5px 5px rgb(241, 241, 241);
+z-index: 200;
 }
 .header .submit_meeting{
 float: right;
@@ -371,4 +296,355 @@ opacity: 0;
    opacity: 1;
 }
 
+}
+.All_meeting{
+margin: 0  auto;
+margin-top: 15px;
+width: 1000px;
+border: 1px solid black;
+}
+.All_meeting h1{
+  text-align: center;
+  border: 1px solid black;
+border-collapse: collapse;
+} 
+.All_meeting_middle li{
+border: 1px solid rgb(204, 195, 195);
+border-collapse: collapse;
+height: 120px;
+background-color: rgb(253, 254, 255);
+padding-top: 15px;
+}
+.All_meeting_img{
+  float: left;
+  width: 150px;
+  height: 100px;
+}
+
+.All_meeting_content{
+ float: left;
+  margin-top: 0px;
+  margin-left: 20px;
+  width: 410px;
+  height: 100px;
+  margin-bottom: 0px;
+}
+.All_meeting_introduce{
+    float: left;
+    margin-left: 20px;
+    font-size: 19px;
+    word-wrap: break-word;
+    width: 230px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.meeting_type_work_manager,.meeting_type_relax_manager{
+float: left;
+width: 135px;
+background-color: khaki;
+height: 30px;
+border-radius: 45px;
+text-align: center;
+font-weight: 700;
+font-size: 20px;
+margin-left: 20px;
+margin-top: 0px;
+}
+.meeting_type_relax_manager{
+background-color: green;
+}
+.meeting_sort_manager{
+float: left;
+width: 50px;
+background-color: red;
+height: 25px;
+text-align: center;
+border-radius: 45px;
+font-size: 16px;
+font-weight: 700;
+margin-left: 20px;
+margin-top: 10px;
+margin-right: 15px;
+
+}
+/* 加急红色，比赛蓝色，外包黄色，组会粉色，全体大会紫色 */
+.hurry_manager_manager{
+  background-color: rgb(245, 4, 4);
+}
+.competition_manager{
+  background-color: rgb(139, 139, 243);
+}
+.outsourcing_manager{
+  background-color: rgb(252, 252, 0);
+}
+.organize_manager{
+  background-color: pink;
+}
+.general_meeting_manager{
+  background-color: rebeccapurple;
+}
+.page_control_manager{
+  height: 50px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.meeting_tag_manager{
+height: 120px;
+  width: 200px;
+  float: left;
+}
+.All_meeting_header{
+  height: 50px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  ;
+}
+.All_meeting_header li{
+ float: left;
+ position: relative;
+   height: 50px;
+   line-height: 50px;
+   font-size: 20px;
+   font-weight: 700;
+   margin-left: 70px;
+}
+.All_meeting_header li:nth-of-type(2){
+margin-left: 80px;
+margin-right: 130px;
+}
+.All_meeting_header li:nth-of-type(3){
+margin-right: 25px;
+}
+.All_meeting_header li:nth-of-type(4){
+margin-right: 25px;
+}
+.All_meeting_header li:nth-of-type(5){
+margin-right: 0px;
+}
+
+.meeting_time{
+float: left;
+margin-top: 10px;
+margin-right: 20px;
+
+}
+
+
+.page_control_left,.page_control_right{
+    float: left;
+width: 30px;
+height: 30px;
+margin-left: 30px;
+margin-top: 10px;
+}
+.page_control_left{
+  margin-left: 0px;
+}
+.page_control_botton{
+  width: 300px;
+  line-height: 50px;
+  height: 50px;
+}
+.page{
+
+  float: left;
+  margin-left:10px;
+
+}
+.page_control_right{
+  margin-left: 10px;
+}
+.no_meeting{
+  text-align: center;
+font-size: 38px;
+line-height: 100px;
+}
+.meeting_time{
+
+  height: 60px;
+  word-wrap: break-word;
+  width: 90px;
+}
+.like_div,.commit_div{
+display: inline-block;
+margin-right:70px;
+text-align: center;
+}
+.like,.commit{
+font-size: 36px;
+cursor: pointer;
+}
+
+.like_num,.commit_num{
+  font-size: 30px;
+  text-align: center;
+}
+.All_meeting_middle li{
+  cursor: pointer;
+}
+.search_tag,.download{
+width: 100px;
+height: 320px;
+border-left: none;
+position: fixed;
+top: 400px;
+left: -0px;
+
+}
+.search_tag{
+ background-color: transparent;
+}
+.search_tag li{
+  margin-bottom: 5px;
+}
+.search_tag li:first-of-type{
+  margin-top: 5px;
+  
+}
+.search_tag_div,.down_load{
+  margin: 0 auto;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: rgba(255, 255, 255);
+  font-weight: 700;
+  color: rgb(110, 121, 138);
+  cursor: pointer;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+.search_tag_div:hover,.down_load:hover{
+  background-color: rgb(196, 199, 206);
+}
+.search_tag_div_choose{
+  background-color: rgb(196, 199, 206);
+
+}
+body{
+  background-color: rgb(244, 246, 249);
+}
+.page_control_botton{
+  float: left;
+}
+
+.input_search{
+  float: left;
+margin-left: 350px;
+line-height: 0px;
+position: relative;
+}
+.input_search_text{
+width: 300px;
+height: 25px;
+margin-top: 10px;
+padding-top: 0px;
+}
+.input_search_text_send{
+  position: absolute;
+  width: 35px;
+  height: 28px;
+ top: 11px;
+ background-color: rgb(77, 218, 243);
+ border: none;
+ left: 315px;
+ font-size: 25px;
+ color: white;
+ 
+ cursor: pointer;
+}
+.cancel_search{
+  width: 110px;
+  height: 50px;
+  line-height: 50px;
+  background-color: saddlebrown;
+  position: fixed;
+  right: 0px;
+  top: 400px;
+   background-color: rgb(255, 255, 255);
+   color: rgb(66, 67, 71);
+   cursor: pointer;
+   display: none;
+}
+.cancel_search:hover{
+transform: scale(1.1);
+ background-color: rgb(196, 199, 206);
+}
+.cancel_search div{
+ 
+  font-size: 22px;
+}
+.cancel_search span{
+  font-size: 20px;
+}
+.how_much_wait{
+  width: 15px;
+  height: 15px;
+  position: fixed;
+  z-index: 100;
+  right: 30px;
+  top: 0px;
+  color: white;
+  border-radius: 90px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 15px;
+  font-weight: 700;
+  opacity: 0;
+  background-color: rgb(192, 6, 6);
+}
+.will_download{
+  position: absolute;
+border-radius: 90px;
+ font-size: 40px;
+  top: 20px;
+  right: -60px;
+  width: 0px;
+  height: 30px;
+  line-height: 35px;
+  padding-right: 39px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  cursor: pointer;
+  display: none;
+  font-weight: 700;
+}
+li{
+  position: relative;
+}
+.will_download_show{
+  display: block !important
+}
+.hidden{
+  display: none !important;
+}
+.will_download_select{
+  background-color: green;
+}
+.click_here{
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 60px;
+  height: 40px;
+  display: none;
+}
+.All_meeting_header, .All_meeting{
+  background-color: rgb(252, 252, 252);
+  border: none ;
+}
+.All_meeting h1{
+    border: none ;
+}
+.leave{
+ float: left;
+width: 80px;
+height: 40px;
+line-height: 40px;
+text-align: center;
+border-radius: 10px;
+color: rgb(114, 100, 100);
+margin-right: 20px;
+cursor: pointer;
+margin-left: 0px;
 }

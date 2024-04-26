@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/meeting.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="return">返回</div>
+        <div class="submit_meeting">上传会议</div>
+        <div class="user_information"><img src="../images/s3.jpg" class="user_image"></div>
+        <div class="user_information_show">
+            <ul>
+                <li class="li_username">姓名:许诺</li>
+                <li class="li_group">组别:前端组</li>
+                <li class="li_age">年纪:19</li>
+                <li class="li_gender">性别:男</li>
+            </ul>
+        </div>
+    </div>
+    <div class="meeting_all">
+        <h1 class="meeting_title_h1">会议主题</h1>
+        <div class="writer">
+            <div class="writer_img "><img src="../images/s3.jpg" class="user_image writer_image"></div>
+            <div class=" writer_name">路人s</div>
+            <div class="writer_group">前端组</div>
+        </div>
+        <h2>会议内容:</h2>
+        <div class="meeting_content1">45666666666666666666saddddddddddddddddd</div>
+        <h2>个人纪要:</h2>
+        <div class="meeting_content2">45666666666666666666saddddddddddddddddd</div>
+        <div class="page">
+            <button class="left_button iconfont">&#xe7ec;</button>
+            <span class="page_num">第1页/共1页</span>
+            <button class="right_button iconfont">&#xe7eb;</button>
+        </div>
+    </div>
+    <div class="manager_button">
+        <span class="change">
+            修改
+        </span>
+        <span class="delete">
+            删除
+        </span>
+    </div>
+    <div class="commit">
+        <h1>评论</h1>
+        <div class="user_commit_top clearfix">
+            <img src="../api_server/attachment/1f00249563e6c7ce6d735878952e6fc1" class="user_commit_top_img">
+            <textarea cols="120" rows="4" class="user_commit_top_textarea"></textarea>
+            <button class="user_commit_top_button">发布</button>
+        </div>
+        <h4 class="split"></h4>
+        <div class="commit_under">
+        </div>
+    </div>
+    <div class="change_div ">
+        <form>
+            <div class="inputBox">
+                <span>会议主题:</span>
+                <input type="text" placeholder="" class="meeting_title">
+            </div>
+            <div class="inputBox">
+                <span class="meeting_span">会议内容:</span>
+                <textarea name="meeting_content" id="" cols="89" rows="10" class="meeting_content_textarea"></textarea>
+            </div>
+            <div class="inputBox">
+                <span>会议照片:</span>
+                <input type="file" class="submit_meeting_information_img_file" id="uploadFile"
+                    accept=".jpg,.png,.bmp,.jpeg,.psd">
+                <span class="meeting_image_show">会议照片预览:</span>
+                <div class=""><img src="../images/s0.png" class="meeting_image"></div>
+            </div>
+            <div class="inputBox">
+                <span>个人纪要:</span>
+                <input type="file" class="txt_file" placeholder="" accept=".txt"> <br />
+                <p>要求txt文件</p>
+            </div>
+            <div class="inputBox">
+                <span>会议类型:</span>
+                <br />
+                <div class="meeting_type_work" id=11><span>办公</span></div>
+                <div class="meeting_type_relax" id=12><span>康乐</span></div>
+            </div>
+            <div class="inputBox tag">
+                <span>会议标签:</span><br />
+                <div class="meeting_tag hurry " id=1><span id=1>加急</span></div>
+                <div class="meeting_tag competition " id=2><span id=2>比赛</span></div>
+                <div class="meeting_tag outsourcing " id=3><span id=3>外包</span></div>
+                <div class="meeting_tag organize " id=4><span id=4>组会</span></div>
+                <div class="meeting_tag general_meeting " id=5><span id=5>全体大会</span></div>
+                <br />
+                <p class="limit">0/3</p>
+            </div>
+            <div class="inputBox_Click">
+                <input type="submit" value="修改" class="meeting_submit_button">
+            </div>
+            <span class="iconfont close">&#xe844;</span>
+        </form>
+    </div>
+    <div class="bookmark iconfont" title="记录当前页码">&#xe7e4;
+    </div>
+</body>
+<script src="../static/meeting.js"></script>
+
+
+</html>

@@ -12,20 +12,40 @@
     <div class="left_header">
         <h1 class="QG_title">QG会议纪要</h1>
         <h1 class="QG_title">用户系统</h1>
-        <div class="user_information_change_title_left_header user_information_change_title_left_header_choose"><span
-                class="iconfont ">&#xe7ae;
+        <div class="user_information_change_title_left_header "><span class="iconfont ">&#xe7ae;
             </span>用户信息</div>
-        <div class="meeting_submit_title_left_header"><span class="iconfont">&#xe7ef;
+        <div class="meeting_submit_title_left_header user_information_change_title_left_header_choose submit_meeting">
+            <span class="iconfont">&#xe7ef;
             </span>上传会议</div>
+        <div class="meeting_submit_title_left_header accept_meeting"><span class="iconfont">&#xe7ae;
+            </span>会议审核</div>
+        <div class="meeting_submit_title_left_header my_meeting"><span class="iconfont">&#xe7ae;
+            </span>我的纪要</div>
+        <div class="meeting_submit_title_left_header question_answer_left"><span class="iconfont">&#xe7ae;
+            </span>疑问反馈</div>
+        <div class="meeting_submit_title_left_header manager_answer_left"><span class="iconfont">&#xe7ae;
+            </span>疑问解决</div>
     </div>
+    <h1 class="return">返回</h1>
     <div class="right_content">
         <!-- 修改用户信息的模块 -->
-        <div class="change_user_information show">
+        <div class="change_user_information ">
             <h1 class="change_user_information_title">修改用户信息</h1>
+            <form method="post" class="form_image" name="photo">
+                <div class="inputBox first">
+                    <span class="top_image">头像:</span>
+                    <input type="file" class="change_user_information_img_file" name='photo'
+                        accept=".jpg,.png,.bmp,.jpeg,.psd">
+                    <span class="user_information_image_show">头像预览:</span>
+                    <div class="user_information_image"><img
+                            src="../api_server/attachment/1f00249563e6c7ce6d735878952e6fc1" class="user_image"></div>
+                    <!-- <button type="button" class="image_submit">提交</button> -->
+                </div>
+            </form>
             <form>
                 <div class="inputBox">
                     <span>姓名:</span>
-                    <input type="text" placeholder="长度1——10" class="name" ds>
+                    <input type="text" placeholder="长度1——10" class="name" disabled>
                 </div>
                 <div class="inputBox">
                     <span>旧密码:</span>
@@ -34,12 +54,6 @@
                 <div class="inputBox">
                     <span>新密码:</span>
                     <input type="password" placeholder="由数字，下划线,字母组成，且6——12位" class="newpassword">
-                </div>
-                <div class="inputBox">
-                    <span>头像:</span>
-                    <input type="file" class="change_user_information_img_file">
-                    <span class="user_information_image_show">头像预览:</span>
-                    <div class="user_information_image"><img src="../images/s3.jpg" class="user_image"></div>
                 </div>
                 <div class="inputBox">
                     <span>性别:</span>
@@ -55,14 +69,14 @@
                 <div class="inputBox">
                     <span>组别:</span>
                     <select class="group">
-                        <option value="none_group" class="none_group">暂无</option>
-                        <option value="front_group" class="front_group">前端组</option>
-                        <option value="backstage_group" class="backstage_group">后台组</option>
-                        <option value="embedded_group" class="embedded_group">嵌入式组</option>
-                        <option value="move_group" class="move_group">移动组</option>
-                        <option value="AI_group" class="AI_group">人工智能组</option>
-                        <option value="graph_group" class="graph_group"> 图形组</option>
-                        <option value="design_group" class="design_group">设计组</option>
+                        <option value="暂无" class="none_group">暂无</option>
+                        <option value="前端组" class="front_group">前端组</option>
+                        <option value="后台组" class="backstage_group">后台组</option>
+                        <option value="嵌入式组" class="embedded_group">嵌入式组</option>
+                        <option value="移动组" class="move_group">移动组</option>
+                        <option value="人工智能组" class="AI_group">人工智能组</option>
+                        <option value="图形组" class="graph_group"> 图形组</option>
+                        <option value="设计组" class="design_group">设计组</option>
                     </select>
                 </div>
                 <div class="inputBox_Click">
@@ -72,8 +86,8 @@
         </div>
         <!-- 修改用户信息的模块 -->
         <!-- 上传会议纪要的模块 -->
-        <div class="submit_meeting_information ">
-            <h1 class="submit_meeting_information_title">提交会议纪要</h1>
+        <div class="submit_meeting_information show">
+            <h1 class="submit_meeting_information_title ">提交会议纪要</h1>
             <form>
                 <div class="inputBox">
                     <span>会议主题:</span>
@@ -81,41 +95,139 @@
                 </div>
                 <div class="inputBox">
                     <span>会议内容:</span>
-                    <textarea name="meeting_content" id="" cols="89" rows="10"></textarea>
+                    <textarea name="meeting_content" id="" cols="89" rows="10"
+                        class="meeting_content_textarea"></textarea>
                 </div>
                 <div class="inputBox">
                     <span>会议照片:</span>
-                    <input type="file" class="submit_meeting_information_img_file">
+                    <input type="file" class="submit_meeting_information_img_file" id="uploadFile"
+                        accept=".jpg,.png,.bmp,.jpeg,.psd">
                     <span class="meeting_image_show">会议照片预览:</span>
-                    <div class=""><img src="../images/s3.jpg" class="meeting_image"></div>
+                    <div class=""><img src="../images/s3.jpg" class="meeting_image hidden"></div>
                 </div>
                 <div class="inputBox">
                     <span>个人纪要:</span>
-                    <input type="file" class="txt_file" placeholder=""> <br />
+                    <input type="file" class="txt_file" placeholder="" accept=".txt"> <br />
                     <p>要求txt文件</p>
                 </div>
                 <div class="inputBox">
                     <span>会议类型:</span>
-                    <div class="meeting_type_work"><span>办公</span></div>
-                    <div class="meeting_type_relax"><span>康乐</span></div>
+                    <div class="meeting_type_work" id=11><span>办公</span></div>
+                    <div class="meeting_type_relax" id=12><span>康乐</span></div>
                 </div>
                 <div class="inputBox tag">
                     <span>会议标签:</span>
-                    <div class="meeting_tag hurry "><span id=1>加急</span></div>
-                    <div class="meeting_tag competition "><span id=2>比赛</span></div>
-                    <div class="meeting_tag outsourcing "><span id=3>外包</span></div>
-                    <div class="meeting_tag organize "><span id=4>组会</span></div>
-                    <div class="meeting_tag general_meeting "><span id=5>全体大会</span></div>
+                    <div class="meeting_tag hurry" id=1><span id=1>加急</span></div>
+                    <div class="meeting_tag competition " id=2><span id=2>比赛</span></div>
+                    <div class="meeting_tag outsourcing " id=3><span id=3>外包</span></div>
+                    <div class="meeting_tag organize " id=4><span id=4>组会</span></div>
+                    <div class="meeting_tag general_meeting " id=5><span id=5>全体大会</span></div>
                     <p class="limit">0/3</p>
                 </div>
                 <div class="inputBox_Click">
-                    <input type="submit" value="修改" class="">
+                    <input type="submit" value="提交" class="meeting_submit_button">
                 </div>
             </form>
         </div>
         <!-- 上传会议纪要的模块 -->
+
+        <!-- 管理员审核模块 -->
+        <div class="accept_meeting_right ">
+            <h1 class="change_user_information_title">会议审核</h1>
+            <div class="All_meeting">
+                <h1>所有待审核会议纪要</h1>
+                <ul class="All_meeting_header">
+                    <li>封面</li>
+                    <li>标题</li>
+                    <li>发布时间</li>
+                    <li>标签</li>
+                    <li>审核</li>
+                </ul>
+                <ul class="All_meeting_middle">
+                    <li class="no_meeting">暂无待审核会议</li>
+                </ul>
+                <div class="page_control">
+                    <div class="page_control_botton">
+                        <button class="page_control_left "><span class="iconfont">&#xe7ec; </span></button>
+                        <p class="page">第1页</p>
+                        <button class="page_control_right"><span class="iconfont">&#xe7eb;</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 管理员审核模块 -->
+        <!-- 我的纪要模块 -->
+        <div class="my_meeting_right ">
+            <h1 class="change_user_information_title">我的纪要</h1>
+            <div class="All_meeting">
+                <h1>我的会议纪要</h1>
+                <ul class="All_meeting_header">
+                    <li>封面</li>
+                    <li>标题</li>
+                    <li>发布时间</li>
+                    <li>标签</li>
+                    <li>状态</li>
+                </ul>
+                <ul class="All_meeting_middle_my">
+                    <li class="no_meeting">暂无</li>
+                </ul>
+                <div class="page_control_my">
+                    <div class="page_control_botton_my">
+                        <button class="page_control_left_my"><span class="iconfont">&#xe7ec; </span></button>
+                        <p class="page_my">第1页</p>
+                        <button class="page_control_right_my"><span class="iconfont">&#xe7eb;</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 我的纪要模块 -->
+
+        <!-- 疑问反馈 -->
+        <div class="question_right clearfix">
+            <h1 class="change_user_information_title">疑问与反馈</h1>
+            <div class="QA_BOX">
+                <h2>你有遇到什么问题吗?<br />输入向管理员进行反馈!</h2>
+                <div class="input">
+                    <textarea cols="60" rows="10" class="input_textarea"></textarea>
+                </div>
+                <div class="count_word">0/600字</div>
+                <button class="sendQuestion">发送</button>
+                <h2 class="pass_QS">历史疑问:</h2>
+                <ul class="pass_QS_ul">
+                </ul>
+                <div class="page_control_my_pass clearfix">
+                    <div class="page_control_botton_my_pass">
+                        <button class="page_control_left_my_pass my_pass_button"><span class="iconfont">&#xe7ec;
+                            </span></button>
+                        <p class="page_my_past">第1页</p>
+                        <button class="page_control_right_my_past my_pass_button"><span
+                                class="iconfont">&#xe7eb;</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 疑问反馈 -->
+
+        <!-- 疑问解答 -->
+        <div class="Answer_right ">
+            <h1 class="change_user_information_title ">疑问解决</h1>
+            <div class="QA_BOX Answer_ve">
+                <h2 class="Answer_QS">疑问反馈:</h2>
+                <ul class="Answer_now">
+                </ul>
+                <div class="page_control_my_pass0 clearfix">
+                    <div class="page_control_botton_my_pass_answer">
+                        <button class="page_control_left_my_pass_answer my_pass_button"><span class="iconfont">&#xe7ec;
+                            </span></button>
+                        <p class="page_my_past_answer">第1页</p>
+                        <button class="page_control_right_my_past_answer my_pass_button"><span
+                                class="iconfont">&#xe7eb;</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 疑问反馈 -->
     </div>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../static/submit.js"></script>
 </body>
 

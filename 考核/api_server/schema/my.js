@@ -9,11 +9,8 @@ age = joi.string()
 group = joi.string()
 exports.change_schema = {
     body: {
-        username,
         oldpassword,
         newpassword,
-        gender,
-        age,
-        group
+        username
     }
 }
