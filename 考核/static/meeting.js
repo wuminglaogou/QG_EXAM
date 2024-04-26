@@ -100,11 +100,10 @@ xhr1.addEventListener('loadend', () => {
     //身份和情况判断
     console.log(Orignalresponse)
     if (localStorage.getItem('manager') == `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9` || ((Orignalresponse.user_name == localStorage.getItem('user_name')) && (Orignalresponse.status == -1))) {
-        console.log(`!!!!!`)
         document.querySelector('.manager_button').classList.add('show')
         if (Orignalresponse.status == -1) {
             document.querySelector('.delete').classList.add('hidden')
-            console.log(`555555`)
+
         }
     }
 })

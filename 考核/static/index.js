@@ -385,7 +385,7 @@ console.log(socket)
 socket.onopen = function (e) {
     console.log('连接已打开')
     console.log(socket.readyState)
-    socket.send("fuck word")
+    socket.send("hello word")
 }
 socket.onmessage = function (e) {
     console.log(`收到回复:` + e.data)
