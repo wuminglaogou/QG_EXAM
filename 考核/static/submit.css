@@ -11,9 +11,9 @@ img{
 }
 @font-face {
   font-family: 'iconfont';
-  src: url('iconfont.woff2?t=1713774819824') format('woff2'),
-       url('iconfont.woff?t=1713774819824') format('woff'),
-       url('iconfont.ttf?t=1713774819824') format('truetype');
+  src: url('iconfont.woff2?t=1714128490322') format('woff2'),
+       url('iconfont.woff?t=1714128490322') format('woff'),
+       url('iconfont.ttf?t=1714128490322') format('truetype');
 }
 
 .iconfont {
@@ -753,4 +753,18 @@ margin-top: -15px;
   width: 200px;
   height: 50px;
   margin-left: 62.4vw;
+}
+body{
+   background-color: rgb(234, 235, 236);
+}
+.question_manager{
+  background-color: white;
+}
+.answer_manager{
+  background-color: rgb(221, 221, 221);
+}
+.inputBox{
+  background-color: white;
+  padding-left: 10px;
+  box-shadow: 5px 5px 5px rgb(148, 146, 146);
 }

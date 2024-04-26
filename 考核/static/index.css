@@ -13,9 +13,9 @@ img{
 }
 @font-face {
   font-family: 'iconfont';
-  src: url('iconfont.woff2?t=1713150373059') format('woff2'),
-       url('iconfont.woff?t=1713150373059') format('woff'),
-       url('iconfont.ttf?t=1713150373059') format('truetype');
+  src: url('iconfont.woff2?t=1714128490322') format('woff2'),
+       url('iconfont.woff?t=1714128490322') format('woff'),
+       url('iconfont.ttf?t=1714128490322') format('truetype');
 }
 .iconfont {
   font-family: "iconfont" !important;
