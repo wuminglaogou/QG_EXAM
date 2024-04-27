@@ -428,11 +428,11 @@ const tableToExcel = () => {
             writername: data[i].user_name,
             title: data[i].title,
             content: data[i].content,
-            text: data[i].text,
+            text: data[i].text.replace(/[\t\r\f\n\s\,]*/g, ''),
             time: data[i].time,
         }
     }
-    console.log(jsonData)
+    console.log(jsonData.text)
     let str = `号码,作者,标题,会议内容,个人纪要,时间\n`
     for (let i = 0; i < jsonData.length; i++) {
         for (const key in jsonData[i]) {
