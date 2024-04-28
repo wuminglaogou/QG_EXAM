@@ -432,6 +432,10 @@ document.querySelector('.meeting_submit_button').addEventListener('click', (e) =
         alert('请选择会议封面!')
         return
     }
+    if (!meeting_image_save.name.includes('.png') && !meeting_image_save.name.includes('.jpg') && !meeting_image_save.name.includes('.bmp') && !meeting_image_save.name.includes('.jpeg') && !meeting_image_save.name.includes('.psd')) {
+        alert('会议封面错误!请重新选择会议封面')
+        return
+    }
     if (document.querySelector('.meeting_title').value == '') {
         alert('请输入会议标题!')
         return
@@ -451,6 +455,10 @@ document.querySelector('.meeting_submit_button').addEventListener('click', (e) =
     }
     if (!meeting_txt_save) {
         alert('请上传txt文件!')
+        return
+    }
+    if (!meeting_txt_save.name.includes('.txt')) {
+        alert('不是txt文件!请重新选择')
         return
     }
     // const xhr = new XMLHttpRequest()

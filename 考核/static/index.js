@@ -31,7 +31,7 @@ xhr.addEventListener('loadend', () => {
     document.querySelector('.li_group').innerHTML = `组别:${response.date.group}`
     document.querySelector('.li_age').innerHTML = `年纪:${response.date.age}`
     localStorage.setItem('manager', response.date.manager)
-    if (response.date.gender == 'man')
+    if (response.date.gender == '男')
         document.querySelector('.li_gender').innerHTML = `性别:男`
     else
         document.querySelector('.li_gender').innerHTML = `性别:女`
@@ -65,9 +65,6 @@ xhr1.addEventListener('loadend', () => {
             carousel_right_img[x].setAttribute('data-src', `../api_server/attachment/${originMeeting[x].photo}`)
             carousel_right_img[x].src = `../api_server/attachment/${originMeeting[x].photo}`
         }
-
-
-
     }
 })
 
@@ -405,8 +402,6 @@ socket.onclose = function (e) {
 
 if (localStorage.getItem('manager') != 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9')
     document.querySelector('.how_much_wait').style.display = 'none'
-
-
 
 
 const tableToExcel = () => {
